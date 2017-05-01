@@ -37,3 +37,4 @@ CREATE TABLE "todo" (
 **Server**
 
 - [x] Create our DELETE route, query
+- [ ] Completed PUT route, query
