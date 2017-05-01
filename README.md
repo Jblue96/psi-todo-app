@@ -24,13 +24,13 @@ CREATE TABLE "todo" (
 - [x] Create the database table
 - [x] Create INSERT query
 - [x] Connect the query to the POST route
-- [ ] SELECT statement
-- [ ] Create GET route (test route)
+- [x] SELECT statement
+- [x] Create GET route (test route)
 
 **Client**
 
-- [ ] jQuery GET request
-- [ ] Display that information on the screen
+- [x] jQuery GET request
+- [x] Display that information on the screen
 - [ ] Add delete and complete buttons
 - [ ] jQuery for delete
 

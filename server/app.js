@@ -19,6 +19,25 @@ app.use(bodyParser.urlencoded({extended:true}));
 // Default location for index.html
 app.use(express.static('server/public'));
 
+app.get('/todo', function(req, res){
+  //res.send('Hello world.');
+  pool.connect(function(error, db, done){
+    if(error) {
+      res.sendStatus(500);
+    } else {
+      db.query('SELECT * FROM "todo";',
+               function(error, result){
+                 done();
+                 if(error) {
+                   res.sendStatus(500);
+                 } else {
+                   res.send(result.rows);
+                 }
+               });
+    }
+  });
+});
+
 app.post('/todo', function(req, res){
   console.log(req.body);
   var description = req.body.description;
