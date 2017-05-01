@@ -31,9 +31,9 @@ CREATE TABLE "todo" (
 
 - [x] jQuery GET request
 - [x] Display that information on the screen
-- [ ] Add delete and complete buttons
-- [ ] jQuery for delete
+- [x] Add delete and complete buttons
+- [x] jQuery for delete
 
 **Server**
 
-- [ ] Create our DELETE route, query
+- [x] Create our DELETE route, query

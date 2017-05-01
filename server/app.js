@@ -59,6 +59,27 @@ app.post('/todo', function(req, res){
   });
 });
 
+app.delete('/todo/:id', function(req, res){
+  console.log(req.params.id);
+  var todoid = req.params.id;
+  pool.connect(function(error, db, done){
+    if(error) {
+      res.sendStatus(500);
+    } else {
+      db.query('DELETE FROM "todo" WHERE  '
+               + '"id" = ($1);', [todoid],
+               function(error, result){
+                 done();
+                 if(error) {
+                   res.sendStatus(500);
+                 } else {
+                   res.sendStatus(200);
+                 }
+               });
+    }
+  });
+});
+
 app.listen(port, function() {
   console.log('Listening on port', port);
 });
