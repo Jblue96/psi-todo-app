@@ -1,6 +1,17 @@
 # TODO App
 App to track todo items.
 
+## TABLE CREATE QUERY
+
+```SQL
+CREATE TABLE "todo" (
+	"id" SERIAL PRIMARY KEY,
+	"description" VARCHAR(200) NOT NULL,
+	"completed" BOOLEAN DEFAULT FALSE,
+	"published" TIMESTAMP DEFAULT NOW()
+);
+```
+
 ## TASK LIST
 - [x] Setup node
 - [x] Add folder structure and files
@@ -9,10 +20,10 @@ App to track todo items.
 
 **Server**
 
-- [ ] Create POST route
-- [ ] Create the database table
-- [ ] Create INSERT query
-- [ ] Connect the query to the POST route
+- [x] Create POST route
+- [x] Create the database table
+- [x] Create INSERT query
+- [x] Connect the query to the POST route
 - [ ] SELECT statement
 - [ ] Create GET route (test route)
 
